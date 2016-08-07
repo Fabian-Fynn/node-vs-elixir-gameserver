@@ -8,7 +8,6 @@ socket.on('world_update', function(worldPartial) {
 });
 
 function displayWorldPartial(partial) {
-  console.log(partial)
   $('#partial').html("<b>You:</b><br>");
   $('#partial').append(JSON.stringify(partial.self));
   $('#partial').append("<br><br><b>Other Nodes:</b><br>");

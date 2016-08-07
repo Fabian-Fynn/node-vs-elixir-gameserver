@@ -3,8 +3,22 @@
 ## Setup
 
 ### Elixir
-  Install elixir: apt-get install elixir
+  Install elixir:
+
+    $ apt-get install elixir
+
+  Install elixir's packet manager:
   
+    $ mix local.hex
+    
+  Install Erlang:
+  
+    $ wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
+    
+    $ sudo apt-get update
+    $ sudo apt-get install esl-erlang
+    
+    
 To start your Phoenix app:
 
   1. Install dependencies with `mix deps.get`

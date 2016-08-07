@@ -5,7 +5,7 @@ defmodule ElixirGameserver.RoomChannel do
   def join("rooms:game", message, socket) do
     id = pid_to_string(socket.channel_pid)
     WorldController.create_node(id)
-    #send(self, :after_join)
+    
     :ok = ChannelWatcher.monitor(:rooms, self(), {__MODULE__, :leave, [id]})
     {:ok, socket}
   end
