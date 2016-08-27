@@ -3,7 +3,7 @@ import {displayWorldPartial} from "./main"
 
 class GameSocket {
   static init() {
-    let socket = new Socket("/socket");
+    let socket = new Socket("/elixir/socket");
     socket.connect();
     socket.onClose( e => console.log("Closed connection"));
 

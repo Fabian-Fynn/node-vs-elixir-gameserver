@@ -7,12 +7,11 @@ const path = require('path');
 const connHandler = require('./server/connection_handler.js');
 const worldController = require('./server/world_controller.js');
 
-app.use("", express.static(path.join(__dirname, 'client')));
-
+app.use("", express.static(__dirname + '/client'));
+//app.use('', express.static(path.join(__dirname, 'client')));
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/client/index.html');
 });
-
 
 
 io.on('connection', function(socket) {

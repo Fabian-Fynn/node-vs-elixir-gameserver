@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :elixirGameserver, ElixirGameserver.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
+  url: [host: "fhoffmann.mmt-b2013.multimediatechnology.at", port: 443],
   cache_static_manifest: "priv/static/manifest.json"
 
 # Do not print debug messages in production
@@ -28,8 +28,9 @@ config :logger, level: :info
 #       ...
 #       url: [host: "example.com", port: 443],
 #       https: [port: 443,
-#               keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
-#               certfile: System.get_env("SOME_APP_SSL_CERT_PATH")]
+#         otp_app: :elixirGameserver,
+#         keyfile: System.get_env("KEY_HOME"),
+#         certfile: System.get_env("CERT_HOME")]
 #
 # Where those two env variables return an absolute path to
 # the key and cert in disk or a relative path inside priv,

@@ -3,7 +3,7 @@ defmodule ElixirGameserver.WorldController do
 
   def get_settings() do
     settings = %{
-      field_size: 5
+      field_size: 200
     }
   end
 

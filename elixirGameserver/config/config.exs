@@ -7,7 +7,7 @@ use Mix.Config
 
 # Configures the endpoint
 config :elixirGameserver, ElixirGameserver.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "fhoffmann.mmt-b2013.multimediatechnology.at/elixir"],
   root: Path.dirname(__DIR__),
   secret_key_base: "KdvFRugXeHyiWaPJO1Ribp7OCjIWjDmCGvaNhQ4NontTZ1OaWdD/TEN+EnmpWOOb",
   render_errors: [accepts: ~w(html json)],
@@ -21,7 +21,7 @@ config :logger, :console,
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "prod.exs"
 
 # Configure phoenix generators
 config :phoenix, :generators,
